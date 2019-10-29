@@ -8,7 +8,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="ActionResults\" />
     <Folder Include="Data\" />
-    <Folder Include="Entities\" />
     <Folder Include="Filters\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
