@@ -1,4 +1,27 @@
-﻿<Properties StartupConfiguration="{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}|Default">
-  <MonoDevelop.Ide.ItemProperties.Trululu.web FirstBuild="True" />
+﻿<Properties StartupConfiguration="{61AFD602-DC74-476B-B413-A293D0A8B54D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trululu.web/Entities/Utilisateur.cs">
+    <Files>
+      <File FileName="Trululu.web/Entities/Utilisateur.cs" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Trululu" expanded="True">
+            <Node name="Trululu.web" expanded="True">
+              <Node name="Entities" expanded="True">
+                <Node name="Utilisateur.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Trululu.web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
