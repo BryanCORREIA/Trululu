@@ -11,9 +11,6 @@
 
   <ItemGroup>
     <Folder Include="ActionResults\" />
-    <Folder Include="Filters\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
