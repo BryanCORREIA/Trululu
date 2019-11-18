@@ -8,6 +8,6 @@ namespace Trululu.web.Entities
     public class Civilite
     {
         public int Id { get; set; }
-        public string libelle { get; set; }
+        public string Libelle { get; set; }
     }
 }

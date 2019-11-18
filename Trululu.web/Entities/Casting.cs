@@ -8,10 +8,10 @@ namespace Trululu.web.Entities
     public class Casting
     {
         public int Id { get; set; }
-        public string libelle { get; set; }
-        public int age_min { get; set; }
-        public int age_max { get; set; }
-        public string description_poste { get; set; }
-        public string description_profil { get; set; }
+        public string Libelle { get; set; }
+        public int AgeMin { get; set; }
+        public int AgeMax { get; set; }
+        public string DescriptionPoste { get; set; }
+        public string DescriptionProfil { get; set; }
     }
 }
