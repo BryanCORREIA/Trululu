@@ -8464,26 +8464,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chrystal\\.nuget\\packages\\": {}
+    "/Users/bryancorreia/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\Trululu.web.csproj",
+      "projectUniqueName": "/Users/bryancorreia/Desktop/Development/Trululu/Trululu.web/Trululu.web.csproj",
       "projectName": "Trululu.web",
-      "projectPath": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\Trululu.web.csproj",
-      "packagesPath": "C:\\Users\\Chrystal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\obj\\",
+      "projectPath": "/Users/bryancorreia/Desktop/Development/Trululu/Trululu.web/Trululu.web.csproj",
+      "packagesPath": "/Users/bryancorreia/.nuget/packages/",
+      "outputPath": "/Users/bryancorreia/Desktop/Development/Trululu/Trululu.web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Chrystal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/bryancorreia/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8541,8 +8539,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/bryancorreia/Desktop/Development/Trululu/Trululu.web/obj/Trululu.web.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
