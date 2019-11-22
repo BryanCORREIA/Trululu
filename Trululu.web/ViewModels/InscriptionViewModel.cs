@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Trululu.web.ViewModels
 {
-    public class AccountViewModel 
+    public class InscriptionViewModel 
     {
         [Required]
         public string Nom { get; set; }
