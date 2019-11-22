@@ -7,13 +7,13 @@ using Trululu.web.Controllers;
 
 namespace Trululu.web.ViewModels
 {
-    public class ConnexionViewModel
+    public class SignInViewModel
     {
         [Required]
         [DataType(DataType.EmailAddress)]
         [StringLength(100, ErrorMessage = "Trop long")]
-        public string Email { get; set; }
+        public string Mail { get; set; }
         [Required]
-        public string MotDePasse { get; set; }
+        public string Password { get; set; }
     }
 }

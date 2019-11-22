@@ -17,14 +17,14 @@ namespace Trululu.web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Contact()
+        public IActionResult Feedback()
         {
             return View();
         }
 
         [HttpPost]
         [LogFilter]
-        public IActionResult Contact(ContactViewModel contactViewModel)
+        public IActionResult Feedback(FeedbackViewModel feedbackViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -33,7 +33,7 @@ namespace Trululu.web.Controllers
             }
             else
             {
-                return View(contactViewModel);
+                return View(feedbackViewModel);
             }
         }
     }

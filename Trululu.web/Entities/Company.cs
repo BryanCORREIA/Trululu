@@ -8,9 +8,9 @@ namespace Trululu.web.Entities
     public class Entreprise
     {
         public int Id { get; set; }
-        public string Libelle { get; set; }
-        public int Telephone { get; set; }
-        public string Email { get; set; }
-        public string Adresse { get; set; }
+        public string Wording { get; set; }
+        public int Phone { get; set; }
+        public string Mail { get; set; }
+        public string Adress { get; set; }
     }
 }

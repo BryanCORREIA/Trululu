@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace Trululu.web.ViewModels
 {
-    public class InscriptionViewModel 
+    public class SignUpViewModel 
     {
         [Required]
-        public string Nom { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string Prenom { get; set; }
+        public string FisrtName { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         [StringLength(100, ErrorMessage = "Trop long")]
-        public string Email { get; set; }
+        public string Mail { get; set; }
         [Required]
-        public string Telephone { get; set;  }
+        public string Phone { get; set;  }
         [Required]
-        public DateTime DateNaissance { get; set; }
+        public DateTime DateOfBirth { get; set; }
         [Required]
-        public string Adresse { get; set; }
+        public string Adress { get; set; }
         [Required]
-        public string MotDePasse { get; set; }
+        public string Password { get; set; }
     }
 }
