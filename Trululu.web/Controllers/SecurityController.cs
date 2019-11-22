@@ -10,34 +10,34 @@ namespace Trululu.web.Controllers
     public class SecurityController : Controller
     {
         [HttpGet]
-        public IActionResult Connexion()
+        public IActionResult SignIn()
         {
-            return View(new ConnexionViewModel());
+            return View(new SignInViewModel());
         }
 
-        public IActionResult Index(ConnexionViewModel connexionViewModel)
+        public IActionResult Index(SignInViewModel signInViewModel)
         {
             if (ModelState.IsValid)
             {
                 //TODO SAVE Database
                 return RedirectToAction("Index", "Home");
             }
-            return View(connexionViewModel);
+            return View(signInViewModel);
         }
         [HttpGet]
-        public IActionResult Inscription()
+        public IActionResult SignUp()
         {
-            return View(new InscriptionViewModel());
+            return View(new SignUpViewModel());
         }
 
-        public IActionResult Index(InscriptionViewModel inscriptionViewModel)
+        public IActionResult Index(SignUpViewModel signUpViewModel)
         {
             if (ModelState.IsValid)
             {
                 //TODO SAVE Database
                 return RedirectToAction("Index", "Home");
             }
-            return View(inscriptionViewModel);
+            return View(signUpViewModel);
         }
     }
 }

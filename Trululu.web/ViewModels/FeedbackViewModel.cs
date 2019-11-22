@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trululu.web.ViewModels
 {
-    public class ContactViewModel : IValidatableObject
+    public class FeedbackViewModel : IValidatableObject
     {
         [Required]
         [StringLength(100, ErrorMessage = "Trop long")]
