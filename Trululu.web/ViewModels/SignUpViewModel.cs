@@ -22,7 +22,7 @@ namespace Trululu.web.ViewModels
         [Required]
         public DateTime DateOfBirth { get; set; }
         [Required]
-        public string Adress { get; set; }
+        public string Address { get; set; }
         [Required]
         public string Password { get; set; }
     }

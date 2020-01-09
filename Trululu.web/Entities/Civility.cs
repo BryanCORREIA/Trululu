@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Trululu.web.Entities
 {
-    public class Civilite
+    public class Civility
     {
         public int Id { get; set; }
         public string Wording { get; set; }

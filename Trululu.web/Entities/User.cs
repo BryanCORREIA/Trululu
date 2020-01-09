@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Trululu.web.Entities
 {
-    public class Utilisateur
+    public class User
     {
         public int Id { get; set; }
 
@@ -19,9 +19,9 @@ namespace Trululu.web.Entities
 
         public string Role { get; set; }
 
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
-        public Utilisateur()
+        public User()
         {
         }
     }

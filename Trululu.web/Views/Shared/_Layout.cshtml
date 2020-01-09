@@ -19,15 +19,15 @@
             <div class="container">
                 <nav>
                     <div class="links">
-                        <a href="#">Accueil</a>
+                        <a asp-controller="Home" asp-action="Index">Accueil</a>
                         <div class="circle"></div>
-                        <a href="#">Nos castings</a>
+                        <a asp-controller="Casting" asp-action="Index">Nos castings</a>
                         <div class="circle"></div>
-                        <a href="#">Contact</a>
+                        <a asp-controller="Contact" asp-action="Index">Contact</a>
                     </div>
                     <div class="link-space-member">
-                        <a href="#">S'inscrire</a>
-                        <a href="#" class="dark-link">Connexion</a>
+                        <a asp-controller="Security" asp-action="SignUp">S'inscrire</a>
+                        <a asp-controller="Security" asp-action="SignIn" class="dark-link">Connexion</a>
                     </div>
                 </nav>
             </div>

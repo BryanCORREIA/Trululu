@@ -1,8 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+a, a:hover, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
@@ -53,6 +58,12 @@ a {
     letter-spacing: .8px;
     color: #273c75;
     border-radius: 4px;
+    font-weight: 500;
+    transition: 0.4s ease-in-out;
+}
+
+a:hover {
+    color: #40739e;
 }
 
 .circle {
@@ -65,9 +76,13 @@ a {
 }
 
 a.dark-link {
-    background-color: #273c75;
+    background-color: #40739e;
     color: white;
     padding: 10px 20px;
+}
+
+a.dark-link:hover {
+    background-color: #273c75;
 }
 
 p {
@@ -82,7 +97,7 @@ p {
 .banner {
     background: linear-gradient(to right, #273c75, #40739e);
     padding: 0 40px 40px 0;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .white-container {
@@ -161,4 +176,13 @@ h3 {
     background-color: white;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
     margin-bottom: 50px;
+}
+
+main {
+    position: relative;
+    margin-top: 70px;
+}
+
+input:focus {
+    outline: none;
 }

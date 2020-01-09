@@ -9,9 +9,10 @@ namespace Trululu.web.Controllers
 {
     public class AccountController : Controller
     {
-        public AccountController()
+        [HttpGet]
+        public IActionResult Index()
         {
-
+            return View();
         }
     }
 }

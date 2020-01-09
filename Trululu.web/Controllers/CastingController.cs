@@ -16,9 +16,15 @@ namespace Trululu.web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
         [HttpPost]
         [LogFilter]
-        public IActionResult AddCasting(CastingViewModel castingViewModel)
+        public IActionResult Add(CastingViewModel castingViewModel)
         {
             if (ModelState.IsValid)
             {

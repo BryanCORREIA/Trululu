@@ -15,7 +15,8 @@ namespace Trululu.web.Controllers
             return View(new SignInViewModel());
         }
 
-        public IActionResult Index(SignInViewModel signInViewModel)
+        [HttpPost]
+        public IActionResult SignIn(SignInViewModel signInViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -30,7 +31,8 @@ namespace Trululu.web.Controllers
             return View(new SignUpViewModel());
         }
 
-        public IActionResult Index(SignUpViewModel signUpViewModel)
+        [HttpPost]
+        public IActionResult SignUp(SignUpViewModel signUpViewModel)
         {
             if (ModelState.IsValid)
             {

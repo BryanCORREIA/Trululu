@@ -1,8 +1,13 @@
 ﻿<Properties StartupConfiguration="{E3756E63-5480-45D3-BC8C-5C375BA79C8C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Trululu.web/wwwroot/css/app.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trululu.web/Views/Security/SignUp.cshtml">
     <Files>
-      <File FileName="Trululu.web/Views/Home/Index.cshtml" Line="10" Column="49" />
-      <File FileName="Trululu.web/wwwroot/css/app.css" Line="1" Column="1" />
+      <File FileName="Trululu.web/Views/Shared/_Layout.cshtml" Line="1" Column="16" />
+      <File FileName="Trululu.web/Views/Security/SignIn.cshtml" Line="31" Column="16" />
+      <File FileName="Trululu.web/Views/Security/SignUp.cshtml" Line="60" Column="43" />
+      <File FileName="Trululu.web/wwwroot/styles/security.css" Line="112" Column="12" />
+      <File FileName="Trululu.web/wwwroot/styles/app.css" Line="186" Column="12" />
+      <File FileName="Trululu.web/Data/TruluDbContext.cs" Line="23" Column="61" />
+      <File FileName="Trululu.web/ViewModels/SignUpViewModel.cs" Line="28" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,16 +15,20 @@
           <Node name="Trululu" expanded="True">
             <Node name="Trululu.web" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Connexion" expanded="True" />
-                <Node name="Contact" expanded="True" />
+                <Node name="Casting" expanded="True" />
                 <Node name="Home" expanded="True" />
+                <Node name="Security" expanded="True">
+                  <Node name="SignUp.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="home.css" selected="True" />
-                </Node>
+                <Node name="media" expanded="True" />
+                <Node name="styles" expanded="True" />
               </Node>
             </Node>
           </Node>
