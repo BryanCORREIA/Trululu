@@ -13,11 +13,11 @@ namespace Trululu.web.Data
         {
             // fausse liste de castings en attendant la 
             // methode de recup des données dans la BDD
-            new Casting { Id = 1, Libelle = "Radio-Crochet France Bleu", AgeMin = 18, AgeMax = 99, DescriptionPoste = "Concours de chant", DescriptionProfil = "Chanteur"},
-            new Casting { Id = 2, Libelle = "Nouvelle Star", AgeMin = 12, AgeMax = 99, DescriptionPoste = "Concours de Talent TV", DescriptionProfil = "Tous types d'artiste"},
-            new Casting { Id = 3, Libelle = "Koh Lanta", AgeMin = 18, AgeMax = 65, DescriptionPoste = "Emission TV - Jeu de survie", DescriptionProfil = "Tous types de profil"},
-            new Casting { Id = 4, Libelle = "Des Chiffres et des Lettres", AgeMin = 35, AgeMax = 99, DescriptionPoste = "Emission TV - Jeu de réflexion", DescriptionProfil = "Tous types de profil"},
-            new Casting { Id = 5, Libelle = "Photos de mode", AgeMin = 16, AgeMax = 35, DescriptionPoste = "Shooting - Catalogue prêt-à-porter", DescriptionProfil = "Féminin"}
+            new Casting { Id = 1, Wording = "Radio-Crochet France Bleu", AgeMin = 18, AgeMax = 99, DescriptionPost = "Concours de chant", DescriptionProfile = "Chanteur"},
+            new Casting { Id = 2, Wording = "Nouvelle Star", AgeMin = 12, AgeMax = 99, DescriptionPost = "Concours de Talent TV", DescriptionProfile = "Tous types d'artiste"},
+            new Casting { Id = 3, Wording = "Koh Lanta", AgeMin = 18, AgeMax = 65, DescriptionPost = "Emission TV - Jeu de survie", DescriptionProfile = "Tous types de profil"},
+            new Casting { Id = 4, Wording = "Des Chiffres et des Lettres", AgeMin = 35, AgeMax = 99, DescriptionPost = "Emission TV - Jeu de réflexion", DescriptionProfile = "Tous types de profil"},
+            new Casting { Id = 5, Wording = "Photos de mode", AgeMin = 16, AgeMax = 35, DescriptionPost = "Shooting - Catalogue prêt-à-porter", DescriptionProfile = "Féminin"}
         };
 
         public IEnumerable<Casting> GetAllCastings()

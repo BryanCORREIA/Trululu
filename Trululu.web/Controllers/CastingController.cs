@@ -7,11 +7,12 @@ using Trululu.web.Filters;
 using Trululu.web.ViewModels;
 
 namespace Trululu.web.Controllers
+
+    
 {
     public class CastingController : Controller
-    {
-        [HttpGet]
-        public IActionResult Index()
+    { 
+        public IActionResult AddCasting(CastingViewModel castingViewModel)
         {
             return View();
         }
@@ -38,3 +39,4 @@ namespace Trululu.web.Controllers
         }
     }
 }
+
