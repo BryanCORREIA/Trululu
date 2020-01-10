@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trululu.web", "Trululu.web\Trululu.web.csproj", "{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Trululu.web", "Trululu.web\Trululu.web.csproj", "{E3756E63-5480-45D3-BC8C-5C375BA79C8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71FFDFDB-40DA-4666-BA1F-49E46398FDC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3756E63-5480-45D3-BC8C-5C375BA79C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3756E63-5480-45D3-BC8C-5C375BA79C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3756E63-5480-45D3-BC8C-5C375BA79C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3756E63-5480-45D3-BC8C-5C375BA79C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

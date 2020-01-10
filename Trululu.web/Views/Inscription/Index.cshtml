@@ -1,0 +1,38 @@
+﻿@model Trululu.web.ViewModels.SignUpViewModel
+
+@section title {
+    Inscription
+}
+
+    <h1>Inscription</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Index">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FisrtName" class="control-label"></label>
+                    <input asp-for="FisrtName" class="form-control" />
+                    <span asp-validation-for="FisrtName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mail" class="control-label"></label>
+                    <input asp-for="Mail" class="form-control" />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Créer votre compte" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
