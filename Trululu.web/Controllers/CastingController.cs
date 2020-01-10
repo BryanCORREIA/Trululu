@@ -7,7 +7,11 @@ using Trululu.web.Filters;
 using Trululu.web.ViewModels;
 
 namespace Trululu.web.Controllers
+
+    
 {
+    public class CastingController : Controller
+    { 
         public IActionResult AddCasting(CastingViewModel castingViewModel)
         {
             if (ModelState.IsValid)
@@ -22,3 +26,4 @@ namespace Trululu.web.Controllers
         }
     }
 }
+

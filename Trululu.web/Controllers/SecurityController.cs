@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Trululu.web.Filters;
 using Trululu.web.ViewModels;
 
 namespace Trululu.web.Controllers
@@ -12,17 +13,19 @@ namespace Trululu.web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(new ConnexionViewModel());
+            return View(new SignInViewModel());
         }
 
-        public IActionResult Index(ConnexionViewModel connexionViewModel)
+        [HttpPost]
+        [LogFilter]
+        public IActionResult Index(SignInViewModel signinViewModel)
         {
             if (ModelState.IsValid)
             {
                 //TODO SAVE Database
                 return RedirectToAction("Index", "Home");
             }
-            return View(connexionViewModel);
+            return View(signinViewModel);
         }
     }
 }
