@@ -13,21 +13,5 @@ namespace Trululu.web.Controllers
         {
 
         }
-
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View(new AccountViewModel());
-        }
-
-        public IActionResult Index(AccountViewModel accountViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                //TODO SAVE Database
-                return RedirectToAction("Index", "Home");
-            }
-            return View(accountViewModel);
-        }
     }
 }
