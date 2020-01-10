@@ -11,14 +11,14 @@ namespace Trululu.web.Controllers
     public class SecurityController : Controller
     {
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult SignIn()
         {
             return View(new SignInViewModel());
         }
 
         [HttpPost]
         [LogFilter]
-        public IActionResult Index(SignInViewModel signinViewModel)
+        public IActionResult SignIn(SignInViewModel signinViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -27,6 +27,7 @@ namespace Trululu.web.Controllers
             }
             return View(signinViewModel);
         }
+
         [HttpGet]
         public IActionResult SignUp()
         {
