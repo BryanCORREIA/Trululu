@@ -10,9 +10,9 @@ namespace Trululu.web.Controllers
     public class SecurityController : Controller
     {
         [HttpGet]
-        public IActionResult SignIn()
+        public IActionResult Index()
         {
-            return View(new SignInViewModel());
+            return View(new ConnexionViewModel());
         }
 
         [HttpPost]
@@ -23,7 +23,7 @@ namespace Trululu.web.Controllers
                 //TODO SAVE Database
                 return RedirectToAction("Index", "Home");
             }
-            return View(signInViewModel);
+            return View(connexionViewModel);
         }
         [HttpGet]
         public IActionResult SignUp()
