@@ -25,5 +25,7 @@ namespace Trululu.web.ViewModels
         public string Adresse { get; set; }
         [Required]
         public string MotDePasse { get; set; }
+
+
     }
 }

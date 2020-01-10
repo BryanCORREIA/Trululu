@@ -7,7 +7,7 @@ using Trululu.web.ViewModels;
 
 namespace Trululu.web.Controllers
 {
-    public class ConnexionController : Controller
+    public class SecurityController : Controller
     {
         [HttpGet]
         public IActionResult Index()

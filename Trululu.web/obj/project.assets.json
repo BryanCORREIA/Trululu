@@ -8469,11 +8469,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\Trululu.web.csproj",
+      "projectUniqueName": "F:\\Chrystal\\Documents\\Trululu\\Trululu.web\\Trululu.web.csproj",
       "projectName": "Trululu.web",
-      "projectPath": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\Trululu.web.csproj",
+      "projectPath": "F:\\Chrystal\\Documents\\Trululu\\Trululu.web\\Trululu.web.csproj",
       "packagesPath": "C:\\Users\\Chrystal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chrystal\\source\\repos\\Trululu\\Trululu.web\\obj\\",
+      "outputPath": "F:\\Chrystal\\Documents\\Trululu\\Trululu.web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chrystal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8533,6 +8533,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.1, 3.0.1]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8541,7 +8551,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
