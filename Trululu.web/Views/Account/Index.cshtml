@@ -1,7 +1,11 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@model System.Security.Claims.ClaimsIdentity
+
+@section title {
+    Compte
 }
 
-<h1>Index</h1>
+<main>
+    <h2>Mon compte</h2>
+    @Model.Label
+</main>
 

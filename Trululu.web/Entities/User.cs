@@ -17,7 +17,7 @@ namespace Trululu.web.Entities
         
         public string Password { get; set; }
 
-        public string Role { get; set; }
+        public Array Role { get; set; }
 
         public string Address { get; set; }
 

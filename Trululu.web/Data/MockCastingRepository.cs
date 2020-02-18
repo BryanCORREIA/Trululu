@@ -7,7 +7,7 @@ using Trululu.web.Entities;
 
 namespace Trululu.web.Data
 {
-    public class MockCastingRepository
+    public class MockCastingRepository : ICastingRepository
     {
         private List<Casting> _castings = new List<Casting>
         {

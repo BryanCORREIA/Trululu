@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Trululu.web.Migrations;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Trululu.web
 {
@@ -34,7 +35,18 @@ namespace Trululu.web
                 //o.Filters.Add(typeof(CiviliteItemsPopulator));
             });
 
+            services.AddSession();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                { 
+                    options.LoginPath = "/Security/SignIn";
+                    options.LogoutPath = "/Security/Logout";
+                }
+            );
+
             services.Configure<IISServerOptions>(o => o.AllowSynchronousIO = true);
+            services.AddTransient<ICastingRepository, MockCastingRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +60,10 @@ namespace Trululu.web
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            app.UseSession();
+            app.UseAuthentication();
+            app.UseAuthorization();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -185,4 +186,72 @@ main {
 
 input:focus {
     outline: none;
+}
+
+.title-centered {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    letter-spacing: 0.8px;
+    padding-top: 20px;
+}
+
+.castings {
+    padding: 20px 0;
+}
+
+.castings .casting {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,.1);
+    position: relative;
+}
+
+.castings .casting h4 {
+    font-size: 20px;
+}
+
+.castings .casting .casting-links {
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    display: flex;
+}
+
+.castings .casting .casting-links a {
+    padding: 10px;
+    margin: 0 5px;
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+    text-shadow: 1px 2px 4px rgba(0,0,0,.3);
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.castings .casting .casting-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -8px #aaa;
+}
+
+.castings .casting .casting-links a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a.link-del {
+    background: linear-gradient(225deg, #b7295f, #fd4557);
+}
+
+a.link-edit {
+    background: linear-gradient(225deg, #F79F1F, #fdcb6e);
+}
+
+a.link-see {
+    background: linear-gradient(225deg, #6ab04c, #55efc4);
 }
