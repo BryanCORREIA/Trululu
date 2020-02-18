@@ -59,11 +59,12 @@ namespace Trululu.web
 
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
 
             app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

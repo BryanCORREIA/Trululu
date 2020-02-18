@@ -33,5 +33,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\css\contact.css" />
     <Content Remove="wwwroot\css\home.css" />
+    <Content Remove="Views\Casting\Casting.cshtml" />
   </ItemGroup>
 </Project>
