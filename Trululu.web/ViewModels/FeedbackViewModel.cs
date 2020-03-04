@@ -8,20 +8,24 @@ namespace Trululu.web.ViewModels
 {
     public class FeedbackViewModel : IValidatableObject
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "Trop long")]
+        [StringLength(100)]
+        [Required(ErrorMessage = "Le nom est requis")]
+        [Display(Name = "Name")]
         public string Name { get; set; }
 
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        [StringLength(100, ErrorMessage = "Trop long")]
-        //[RegularExpression(@"(?:[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)|""(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\[\x01-\x09\x0b\x0c\x0e-\x7f])"")@(?:(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-][a-z0-9])?|[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\[\x01-\x09\x0b\x0c\x0e-\x7f])+)])", ErrorMessage = "Mauvais mail")]
+        [EmailAddress(ErrorMessage = "Le mail est incorrect")]
+        [Required(ErrorMessage = "L'email est requis")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(5000, ErrorMessage = "Trop long")]
+        [StringLength(100)]
+        [Required(ErrorMessage = "L'objet du message est requis")]
+        [Display(Name = "Subject")]
+        public string Subject { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        [Display(Name = "Message")]
         public string Message { get; set; }
-        public bool ContactMe { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

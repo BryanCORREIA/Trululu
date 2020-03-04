@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,20 +22,11 @@ namespace Trululu.web.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
-        [LogFilter]
         public IActionResult Feedback(FeedbackViewModel feedbackViewModel)
         {
-            if (ModelState.IsValid)
-            {
-                //TODO SAVE Database
-                return RedirectToAction("Index", "Home");
-            }
-            else
-            {
-                return View(feedbackViewModel);
-            }
+            return View(feedbackViewModel);
         }
     }
 }
