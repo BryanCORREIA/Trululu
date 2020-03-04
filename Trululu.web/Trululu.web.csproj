@@ -17,6 +17,7 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\styles\" />
     <Folder Include="Areas\Identity\Pages\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

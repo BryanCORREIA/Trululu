@@ -11,7 +11,6 @@ using Trululu.web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Trululu.web.Migrations;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Trululu.web

@@ -9,8 +9,8 @@ using Trululu.web.Data;
 namespace Trululu.web.Migrations
 {
     [DbContext(typeof(TruluDbContext))]
-    [Migration("20200303091015_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200304221948_CreateDatabase")]
+    partial class CreateDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,6 +30,9 @@ namespace Trululu.web.Migrations
                     b.Property<int>("AgeMin")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CreatorId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("DescriptionPost")
                         .HasColumnType("TEXT");
 
@@ -42,43 +45,6 @@ namespace Trululu.web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("casting");
-                });
-
-            modelBuilder.Entity("Trululu.web.Entities.Civility", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Wording")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("civility");
-                });
-
-            modelBuilder.Entity("Trululu.web.Entities.Company", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Address")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Mail")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Phone")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Wording")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("compagny");
                 });
 
             modelBuilder.Entity("Trululu.web.Entities.User", b =>

@@ -45,43 +45,6 @@ namespace Trululu.web.Migrations
                     b.ToTable("casting");
                 });
 
-            modelBuilder.Entity("Trululu.web.Entities.Civility", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Wording")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("civility");
-                });
-
-            modelBuilder.Entity("Trululu.web.Entities.Company", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Address")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Mail")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Phone")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Wording")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("compagny");
-                });
-
             modelBuilder.Entity("Trululu.web.Entities.User", b =>
                 {
                     b.Property<int>("Id")
