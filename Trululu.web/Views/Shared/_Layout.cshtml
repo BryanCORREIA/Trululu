@@ -27,18 +27,13 @@
                         <a asp-controller="Contact" asp-action="Index">Contact</a>
                     </div>
                     <div class="link-space-member">
-                        <a asp-controller="Security" asp-action="SignUp">S'inscrire</a>
-                        <a asp-controller="Security" asp-action="SignIn" class="dark-link">Connexion</a>
+                        <a asp-controller="Account" asp-action="Index" class="dark-link">Mon compte</a>
                     </div>
                 </nav>
             </div>
         </header>
 
         @RenderBody()
-
-        <footer>
-            <p>© Trululu 2019</p>
-        </footer>
 
         @RenderSection("Scripts", required: false)
         <!-- Optional JavaScript -->

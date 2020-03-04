@@ -46,7 +46,8 @@ namespace Trululu.web
             );
 
             services.Configure<IISServerOptions>(o => o.AllowSynchronousIO = true);
-            services.AddTransient<ICastingRepository, MockCastingRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ICastingRepository, CastingRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

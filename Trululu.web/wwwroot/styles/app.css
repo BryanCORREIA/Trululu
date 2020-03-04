@@ -103,9 +103,9 @@ p {
 
 .white-container {
     background-color: white;
-    padding: 100px;
+    padding: 200px 100px;
     border-bottom-right-radius: 100px;
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -158,12 +158,6 @@ h2 {
     justify-content: space-between;
 }
 
-footer {
-    background-color: #F5F5F5;
-    padding: 30px 50px;
-    font-weight: bolder;
-}
-
 h3 {
     text-align: center;
     margin: 50px;
@@ -184,7 +178,7 @@ main {
     margin-top: 70px;
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: none;
 }
 
@@ -254,4 +248,66 @@ a.link-edit {
 
 a.link-see {
     background: linear-gradient(225deg, #6ab04c, #55efc4);
+}
+
+.content-profile {
+    padding-top: 50px;
+}
+
+.header-profile {
+    background: linear-gradient(to right, #273c75, #40739e);
+    padding: 30px 50px;
+    color: white;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px -8px #aaa;
+}
+
+.btn-disconnect a {
+    background-color: white;
+    color: #273c75;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.header-profile p {
+    margin: 0;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.action {
+    box-shadow: 0 8px 25px -8px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.action h3 {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.action a {
+    color: white !important;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using Trululu.web.ViewModels;
+
 namespace Trululu.web.Entities
 {
     public class User
@@ -17,12 +19,26 @@ namespace Trululu.web.Entities
         
         public string Password { get; set; }
 
-        public Array Role { get; set; }
+        public string Role { get; set; }
 
         public string Address { get; set; }
 
         public User()
         {
+            this.Role = "ROLE_USER";
+        }
+
+        public User signUp(SignUpViewModel signUpViewModel)
+        {
+            this.FisrtName = signUpViewModel.FisrtName;
+            this.Name = signUpViewModel.Name;
+            this.Mail = signUpViewModel.Mail;
+            this.Phone = signUpViewModel.Phone;
+            this.DateOfBirth = signUpViewModel.DateOfBirth;
+            this.Password = signUpViewModel.Password;
+            this.Address = signUpViewModel.Address;
+
+            return this;
         }
     }
 }

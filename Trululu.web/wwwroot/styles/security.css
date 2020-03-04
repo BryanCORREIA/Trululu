@@ -20,10 +20,11 @@
     font-variant: all-small-caps;
 }
 
-.box-form input {
+.box-form input, .box-form textarea {
     background-color: #FAFAFA;
     border: none;
     width: 100%;
+    resize: none;
 }
 
 .box-form .box-icon-input {
@@ -33,7 +34,7 @@
     border-bottom: 2px solid #F1F1F1;
 }
 
-.box-form .box-top input {
+.box-form .box-top input, .box-form .box-top textarea {
     border-top: 2px solid #F1F1F1;
 }
 

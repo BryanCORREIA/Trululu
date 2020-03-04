@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,22 +21,33 @@ namespace Trululu.web.Controllers
             _castingRepository = castingRepository;
         }
 
+        private int getIdCurrentUser()
+        {
+            var userClaimIdentity = User.Identity as ClaimsIdentity;
+            int userId = int.Parse(userClaimIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Sid).Value);
+
+            return userId;
+        }
+
         public IActionResult Index()
         {
-            var castings = _castingRepository.GetAllCastings();
+            var castings = _castingRepository.FindAll();
+
             return View(castings);
         }
 
-        public IActionResult Casting(int id)
+        public IActionResult Details(int id)
         {
-            var casting = _castingRepository.GetCastingById(id);
+            Casting casting = _castingRepository.FindById(id);
+
             return View(casting);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Add()
         {
-            return View();
+            return View(new CastingViewModel());
         }
 
         [HttpPost]
@@ -44,13 +56,28 @@ namespace Trululu.web.Controllers
         {
             if (ModelState.IsValid)
             {
-                //TODO SAVE Database
-                return RedirectToAction("Index", "Home");
+                Casting casting = new Casting();
+                casting.NewFromForm(castingViewModel);
+
+                casting.CreatorId = getIdCurrentUser();
+                _castingRepository.Add(casting);
+
+                return RedirectToAction("Index", "Account");
             }
-            else
+
+            return View(castingViewModel);
+        }
+
+        [Authorize]
+        public IActionResult Remove(int id)
+        {
+            Casting casting = _castingRepository.FindById(id);
+            if (casting.CreatorId == getIdCurrentUser())
             {
-                return View(castingViewModel);
+                _castingRepository.Remove(casting);
             }
+
+            return RedirectToAction("Index", "Account");
         }
     }
 }

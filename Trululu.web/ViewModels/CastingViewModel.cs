@@ -9,9 +9,6 @@ namespace Trululu.web.ViewModels
 {
     public class CastingViewModel
     {
-            
-        [Required]
-        public string Id { get; set; }
         [Required]
         public string Libelle { get; set; }
         [Required]
@@ -22,7 +19,5 @@ namespace Trululu.web.ViewModels
         public String DescriptionPoste { get; set; }
         [Required]
         public string DescriptionProfil { get; set; }
-       
-    
     }
 }

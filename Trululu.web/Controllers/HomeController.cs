@@ -11,7 +11,6 @@ namespace Trululu.web.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
         [HttpGet]
         public IActionResult Index()
         {

@@ -14,9 +14,7 @@
                     <h4>@casting.Wording</h4>
                     <p>@casting.DescriptionPost</p>
                     <div class="casting-links">
-                        <a href="#" class="link-del"><i class="fas fa-trash"></i></a>
-                        <a href="#" class="link-edit"><i class="fas fa-pen"></i></a>
-                        <a href="#" class="link-see"><i class="far fa-eye"></i></a>
+                        <a asp-controller="Casting" asp-action="Details" asp-route-id="@casting.Id" class="link-see"><i class="far fa-eye"></i></a>
                     </div>
                 </div>
             }

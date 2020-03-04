@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Trululu.web.Data;
+using Trululu.web.Entities;
 using Trululu.web.Filters;
 using Trululu.web.ViewModels;
 
@@ -13,9 +15,16 @@ namespace Trululu.web.Controllers
 {
     public class SecurityController : Controller
     {
-        private IEnumerable<Claim> GetRoleClaims()
+        private readonly IUserRepository _userRepository;
+
+        public SecurityController(IUserRepository userRepository)
         {
-            yield return new Claim(ClaimTypes.Role, "ROLE_ADMIN");
+            _userRepository = userRepository;
+        }
+
+        private IEnumerable<Claim> GetRoleClaims(User user)
+        {
+            yield return new Claim(ClaimTypes.Role, user.Role);
         }
 
         [HttpGet]
@@ -30,18 +39,23 @@ namespace Trululu.web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var claims = new List<Claim>
+                User userFind = _userRepository.FindByAuth(signinViewModel.Mail, signinViewModel.Password);
+
+                if (null != userFind)
                 {
-                    new Claim(ClaimTypes.Sid, "1"),
-                    new Claim(ClaimTypes.NameIdentifier, "Bryan")
-                };
-                claims.AddRange(GetRoleClaims());
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Sid, userFind.Id.ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, userFind.Mail)
+                    };
+                    claims.AddRange(GetRoleClaims(userFind));
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                //TODO SAVE Database
+                    return RedirectToAction("Index", "Home");
+                }
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Signin", "Security");
             }
             return View(signinViewModel);
         }
@@ -57,8 +71,11 @@ namespace Trululu.web.Controllers
         {
             if (ModelState.IsValid)
             {
-                //TODO SAVE Database
-                return RedirectToAction("Index", "Home");
+                User user = new User();
+                user.signUp(signUpViewModel);
+
+                _userRepository.Add(user);
+                return RedirectToAction("Signin", "Security");
             }
             return View(signUpViewModel);
         }
@@ -66,7 +83,8 @@ namespace Trululu.web.Controllers
         [HttpGet]
         public IActionResult Logout()
         {
-            return View(new SignUpViewModel());
+            HttpContext.SignOutAsync();
+            return RedirectToAction("Signin", "Security");
         }
     }
 }
