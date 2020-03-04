@@ -2,17 +2,15 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Trululu.web.Data;
 
 namespace Trululu.web.Migrations
 {
     [DbContext(typeof(TruluDbContext))]
-    [Migration("20200304081822_AddCreatorCasting")]
-    partial class AddCreatorCasting
+    partial class TruluDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +28,7 @@ namespace Trululu.web.Migrations
                     b.Property<int>("AgeMin")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("CreatorId")
+                    b.Property<int>("CreatorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("DescriptionPost")
@@ -43,8 +41,6 @@ namespace Trululu.web.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CreatorId");
 
                     b.ToTable("casting");
                 });
@@ -119,13 +115,6 @@ namespace Trululu.web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("user");
-                });
-
-            modelBuilder.Entity("Trululu.web.Entities.Casting", b =>
-                {
-                    b.HasOne("Trululu.web.Entities.User", "Creator")
-                        .WithMany()
-                        .HasForeignKey("CreatorId");
                 });
 #pragma warning restore 612, 618
         }
