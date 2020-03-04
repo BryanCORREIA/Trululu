@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
     <head>
         <!-- Required meta tags -->
@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
         <link rel="stylesheet" href="~/styles/app.css"/>
         @RenderSection("styles", required: false)
 
@@ -23,21 +24,16 @@
                         <div class="circle"></div>
                         <a asp-controller="Casting" asp-action="Index">Nos castings</a>
                         <div class="circle"></div>
-                        <a asp-controller="Contact" asp-action="Index">Contact</a>
+                        <a asp-controller="Home" asp-action="Feedback">Contact</a>
                     </div>
                     <div class="link-space-member">
-                        <a asp-controller="Security" asp-action="SignUp">S'inscrire</a>
-                        <a asp-controller="Security" asp-action="SignIn" class="dark-link">Connexion</a>
+                        <a asp-controller="Account" asp-action="Index" class="dark-link">Mon compte</a>
                     </div>
                 </nav>
             </div>
         </header>
 
         @RenderBody()
-
-        <footer>
-            <p>© Trululu 2019</p>
-        </footer>
 
         @RenderSection("Scripts", required: false)
         <!-- Optional JavaScript -->

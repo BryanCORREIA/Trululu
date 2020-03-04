@@ -9,18 +9,18 @@ namespace Trululu.web.Data
 {
     public class TruluDbContext : DbContext
     {
-        public DbSet<User> utilisateurs { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Casting> Castings { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Trululu;Integrated Security=True;");
+            optionsBuilder.UseSqlite("Data Source=trululu.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("user");
             modelBuilder.Entity<Casting>().ToTable("casting");
-            modelBuilder.Entity<Civility>().ToTable("civility");
-            modelBuilder.Entity<Company>().ToTable("compagny");
         }
     }
 }
